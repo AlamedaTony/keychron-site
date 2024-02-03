@@ -1,11 +1,13 @@
 import { useState } from 'react'
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service' 
 import './App.css';
-import NewOrderPage from '../NewOrderPage/NewOrderPage';
+import ProductListingPage from '../ProductListingPage/ProductListingPage';
 import AuthPage from '../AuthPage/AuthPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import NavBar from '../../components/NavBar/NavBar';
+import AboutUsPage from "../AboutUsPage/AboutUsPage";
+import FAQPage from "../FAQPage/FAQPage"
 
 function App() {
   const [user, setUser] = useState(getUser())
@@ -16,8 +18,11 @@ function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
-            <Route path="/orders/new" element={<NewOrderPage />} />
+            <Route path="/collections" element={<ProductListingPage />} />
             <Route path="/orders" element={<OrderHistoryPage />} />
+            <Route path="/about" element={<AboutUsPage />} />
+            <Route path="/questions" element={<FAQPage />} />
+            <Route path="/*" element={<Navigate to="/collections" />} />
           </Routes>
         </>
         :

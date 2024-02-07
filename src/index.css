@@ -16,12 +16,13 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: -apple-system, BlinkMacSystemFont,  'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--tan-4);
+  background: var(--Background-color-primary, #FFF);
+  /* background-color: var(--tan-4); */
   padding: 2vmin;
   height: 100vh;
 }
@@ -121,20 +122,25 @@ button, a.button {
   margin: 1vmin;
   padding: 1vmin;
   color: var(--white);
-  background-color: var(--orange);
+  /* background-color: var(--orange); */
+  background: var(--Color-Brand-black, #000);
   font-size: 2vmin;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
-  border: .1vmin solid var(--tan-2);
-  border-radius: .5vmin;
+  /* border: .1vmin solid var(--tan-2); */
+  border: 1px solid var(--Color-Brand-black, #000);
+  /* border-radius: .5vmin; */
   outline: none;
   cursor: pointer;
 }
 
 button.btn-sm {
-  font-size: 1.5vmin;
-  padding: .6vmin .8vmin;
+  display: flex;
+  padding: 0.5rem 1.25rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 button.btn-xs {

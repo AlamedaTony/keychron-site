@@ -4,10 +4,10 @@ import { getUser } from '../../utilities/users-service'
 import './App.css';
 import ProductListingPage from '../ProductListingPage/ProductListingPage';
 import AuthPage from '../AuthPage/AuthPage';
-import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import NavBar from '../../components/NavBar/NavBar';
 import AboutUsPage from "../AboutUsPage/AboutUsPage";
 import FAQPage from "../FAQPage/FAQPage"
+import HomePage from '../HomePage/HomePage';
 
 function App() {
   const [user, setUser] = useState(getUser())
@@ -18,8 +18,8 @@ function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
+            <Route path="/home" element={<HomePage />} />
             <Route path="/collections" element={<ProductListingPage />} />
-            <Route path="/orders" element={<OrderHistoryPage />} />
             <Route path="/about" element={<AboutUsPage />} />
             <Route path="/questions" element={<FAQPage />} />
             <Route path="/*" element={<Navigate to="/collections" />} />

@@ -141,6 +141,7 @@ button.btn-sm {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+  font-size: medium;
 }
 
 button.btn-xs {
@@ -150,7 +151,7 @@ button.btn-xs {
 
 button:disabled, form:invalid button[type="submit"] {
   cursor: not-allowed;
-  background-color: var(--tan-4);
+  background-color: #CCCCCC;
 }
 
 button[type="submit"] {

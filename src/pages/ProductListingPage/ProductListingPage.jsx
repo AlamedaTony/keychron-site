@@ -4,13 +4,13 @@ import * as ordersAPI from '../../utilities/orders-api';
 import './ProductListingPage.css';
 import { Link, useNavigate } from 'react-router-dom';
 // import Logo from '../../components/Logo/Logo';
-// import MenuList from '../../components/MenuList/MenuList';
+import KeyboardList from '../../components/KeyboardList/KeyboardList';
 import CategoryList from '../../components/CategoryList/CategoryList';
-// import OrderDetail from '../../components/OrderDetail/OrderDetail';
+import OrderDetail from '../../components/OrderDetail/OrderDetail';
 // import UserLogOut from '../../components/UserLogOut/UserLogOut';
 
 export default function ProductListingPage({ user, setUser }) {
-  const [menuItems, setMenuItems] = useState([]);
+  const [keyboardItems, setKeyboardItems] = useState([]);
   const [activeCat, setActiveCat] = useState('');
   const [cart, setCart] = useState(null);
   const categoriesRef = useRef([]);
@@ -22,7 +22,7 @@ export default function ProductListingPage({ user, setUser }) {
     async function getItems() {
       const items = await itemsAPI.getAll();
       categoriesRef.current = [...new Set(items.map(item => item.category.name))];
-      setMenuItems(items);
+      setKeyboardItems(items);
       setActiveCat(categoriesRef.current[0]);
     }
     getItems();
@@ -52,9 +52,8 @@ export default function ProductListingPage({ user, setUser }) {
     }
 
   return (
-    <main className="NewOrderPage">
+    <main className="ProductListingPage">
       <aside>
-        
         <CategoryList
           categories={categoriesRef.current}
           activeCat={activeCat}
@@ -62,11 +61,11 @@ export default function ProductListingPage({ user, setUser }) {
         />
         {/* <Link to="/orders" className="button btn-sm">PREVIOUS ORDERS</Link> */}
       </aside>
-      {/* <MenuList
-        menuItems={menuItems.filter(item => item.category.name === activeCat)}
+      <KeyboardList
+        keyboardItems={keyboardItems.filter(item => item.category.name === activeCat)}
         handleAddToOrder={handleAddToOrder}
-      /> */}
-      {/* <OrderDetail order={cart} handleChangeQty={handleChangeQty} handleCheckout={handleCheckout} /> */}
+      />
+      <OrderDetail order={cart} handleChangeQty={handleChangeQty} handleCheckout={handleCheckout} />
     </main>
   );
 }

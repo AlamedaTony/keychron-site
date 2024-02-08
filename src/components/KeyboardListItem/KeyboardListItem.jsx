@@ -7,7 +7,7 @@ export default function KeyboardListItem({ keyboardItem, handleAddToOrder }) {
       <div className="buy">
         <span>${keyboardItem.price.toFixed(2)}</span>
         <button className="btn-sm" onClick={() => handleAddToOrder(keyboardItem._id)}>
-          ADD
+          ADD TO CART
         </button>
       </div>
     </div>

@@ -70,9 +70,9 @@ code {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--tan-1);
-  color: var(--text-dark);
-  border: .1vmin solid var(--tan-3);
+  background-color: #CCCCCC;
+  color: #000;
+  border: .1vmin solid black;
   border-radius: 1vmin;
   padding: .6vmin;
   text-align: center;
@@ -137,7 +137,7 @@ button, a.button {
 
 button.btn-sm {
   display: flex;
-  padding: 0.5rem 1.25rem;
+  padding: 0.2rem 0.3rem;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;

@@ -8,6 +8,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import AboutUsPage from "../AboutUsPage/AboutUsPage";
 import FAQPage from "../FAQPage/FAQPage"
 import HomePage from '../HomePage/HomePage';
+import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 
 function App() {
   const [user, setUser] = useState(getUser())
@@ -22,6 +23,7 @@ function App() {
             <Route path="/collections" element={<ProductListingPage user={user} setUser={setUser} />} />
             <Route path="/about" element={<AboutUsPage />} />
             <Route path="/questions" element={<FAQPage />} />
+            <Route path="/orders" element={<OrderHistoryPage />} />
             <Route path="/*" element={<Navigate to="/collections" />} />
           </Routes>
         </>

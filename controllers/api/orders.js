@@ -37,3 +37,4 @@ async function checkout(req, res) {
   await cart.save();
   res.json(cart);
 }
+

@@ -81,8 +81,8 @@ code {
 
 .form-container {
   padding: 3vmin;
-  background-color: var(--tan-1);
-  border: .1vmin solid var(--tan-3);
+  background-color: #dadada;
+  border: .1vmin solid #CCCCCC;
   border-radius: 1vmin;
 }
 
@@ -107,7 +107,7 @@ label {
 input {
   padding: 1vmin;
   font-size: 2vmin;
-  border: .1vmin solid var(--tan-3);
+  border: .1vmin solid black;
   border-radius: .5vmin;
   color: var(--text-dark);
   background-image: none !important; /* prevent lastpass */
@@ -115,7 +115,7 @@ input {
 }
 
 input:focus {
-  border-color: var(--orange);
+  border-color: black;
 }
 
 button, a.button {
@@ -123,13 +123,13 @@ button, a.button {
   padding: 1vmin;
   color: var(--white);
   /* background-color: var(--orange); */
-  background: var(--Color-Brand-black, #000);
+  background: #000;
   font-size: 2vmin;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
   /* border: .1vmin solid var(--tan-2); */
-  border: 1px solid var(--Color-Brand-black, #000);
+  border: 1px solid #000;
   /* border-radius: .5vmin; */
   outline: none;
   cursor: pointer;

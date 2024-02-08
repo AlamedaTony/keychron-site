@@ -1,3 +1,3 @@
 export default function FAQPage() {
-    return <h1>FAQPage</h1>
+    return <h1>Too be added,<br />Come see us soon!</h1>
 }

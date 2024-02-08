@@ -1,3 +1,3 @@
 export default function AboutUsPage() {
-    return <h1>AboutUsPage</h1>
+    return <h1>Too be added,<br />Come see us soon!</h1>
 }

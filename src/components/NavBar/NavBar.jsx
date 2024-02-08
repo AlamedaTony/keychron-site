@@ -16,13 +16,12 @@ export default function NavBar({ user, setUser }) {
                 <Link to="/about" style={{ textDecoration: 'none' }}>About Us</Link>
                 <Link to="/collections" style={{ textDecoration: 'none' }}>Products</Link>
                 <Link to="/questions" style={{ textDecoration: 'none' }}>FAQ</Link>
+                <Link to="/orders" style={{ textDecoration: 'none' }}>Order History</Link>
             </div>
             <div className="center-nav">
                 Keychron
             </div>
             <div className="right-nav">
-                {/* Hello, {user.name} */}
-                {/* <Link to="#" style={{ textDecoration: 'none' }} onClick={handleLogOut}>Log Out</Link> */}
                 <button type='button' onClick={handleLogOut}>Log Out</button>
             </div>
         </nav>

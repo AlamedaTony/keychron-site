@@ -59,7 +59,7 @@ export default function ProductListingPage({ user, setUser }) {
           activeCat={activeCat}
           setActiveCat={setActiveCat}
         />
-        {/* <Link to="/orders" className="button btn-sm">PREVIOUS ORDERS</Link> */}
+        {/* <Link to="/orders" className="button btn-sm">ORDER HISTORY</Link> */}
       </aside>
       <KeyboardList
         keyboardItems={keyboardItems.filter(item => item.category.name === activeCat)}

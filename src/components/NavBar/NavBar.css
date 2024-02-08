@@ -28,4 +28,21 @@ button {
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+    transition: background-color 1s;
+}
+
+button:hover {
+    background-color: #CCCCCC;
+}
+
+button:focus,
+button:active {
+    background-color: #000000;
+    transition: none;
+}
+
+.center-nav {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
 }

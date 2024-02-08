@@ -19,7 +19,7 @@ function App() {
           <NavBar user={user} setUser={setUser} />
           <Routes>
             <Route path="/home" element={<HomePage />} />
-            <Route path="/collections" element={<ProductListingPage />} />
+            <Route path="/collections" element={<ProductListingPage user={user} setUser={setUser} />} />
             <Route path="/about" element={<AboutUsPage />} />
             <Route path="/questions" element={<FAQPage />} />
             <Route path="/*" element={<Navigate to="/collections" />} />
